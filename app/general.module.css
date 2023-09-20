@@ -1,0 +1,111 @@
+/*Header*/
+.header{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 5000;
+}
+  
+.logoImg{
+    max-width: 120px !important;
+    padding-left: 30px;
+}
+  
+.menu{
+    display: flex;
+}
+
+.menuList{
+    display: flex;
+}
+
+.menuItem{
+    margin: 0px 20px;
+    list-style: none;
+}
+
+.menuItem a{
+    text-decoration: none;
+    color: #575757;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.contactAndLanguageButtons{
+    padding-right: 30px;
+}
+
+.contactLink{
+    text-decoration: none;
+    background: rgb(36,96,158);
+    background: linear-gradient(90deg, rgba(36,96,158,1) 0%, rgba(56,116,179,1) 50%, rgba(73,134,196,1) 100%);
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 30px;
+}
+
+/*Hero section*/
+.slideItem{
+    max-width: 100% !important;
+    height: 600px;
+    background-image: url('/assets/img/scroll_1.png');
+    background-size: contain;
+    display: flex;
+    align-items: center;
+}
+
+.slideItem{
+    min-width: 100% !important;
+}
+
+/*About us section*/
+.about{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImg{
+    max-width: 90%;
+}
+
+/*Services*/
+.services{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/que hacemos fondo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.servicesContainer{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.serviceBox{
+    max-width: 250px;
+    padding: 20px 25px;
+    background-color: #fff;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px 10px #2b2b2b;
+}
+
+.serviceImg{
+    max-width: 80px;
+}
