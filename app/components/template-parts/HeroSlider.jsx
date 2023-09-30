@@ -19,16 +19,34 @@ const settings = {
 
 const HeroSlider = () => {
   return (
-    <div>
+    <div className={general.slider}>
       <Slider {...settings}>
         <div>
-          <div className={general.slideItem}>
-            <h2>Slide 1</h2>
+          <div className={general.slideItem} 
+          style={{backgroundImage: `url('/assets/img/scroll_1.png')`}}>
+            <h2 className={general.slideItemDescription}>Creamos propuestas de valor que 
+            <span style={{color: `#336DAA`}}> revolucionan </span>
+            la forma en la que las empresas operan</h2>
+
+            <div className={general.generalBtnContainer}>
+              <a href="" className={general.slideItemBtnBlue}>Conoce más</a>
+            </div>
+            
           </div>
         </div>
         <div>
-          <div className={general.slideItem}>
-            <h2>Slide 2</h2>
+          <div className={general.slideSecondItem}
+          style={{backgroundImage: `url('/assets/img/scroll_3.png')`}}>
+            <h2 className={general.slideItemDescription}>
+              construimos 
+              <span style={{color: `#4DA9B5`}}> soluciones a la medida, </span>soluciones a la medida, 
+              que se adaptan a tus necesidades
+            </h2>
+
+            <div className={general.generalBtnContainer}>
+              <a href="" className={general.slideItemBtnBlueLight}>Conoce más</a>
+            </div>
+
           </div>
         </div>
       </Slider>
