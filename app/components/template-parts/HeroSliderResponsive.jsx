@@ -16,7 +16,12 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const HeroSliderResponsive = () => {
+const HeroSliderResponsive = ({ changeLanguage, translations }) => {
+  const handleLanguageChange = (newLanguage) => {
+    // Llama a la función para cambiar el idioma con el nuevo idioma como argumento
+    changeLanguage(newLanguage);
+  };
+
   return (
     <div className={general.sliderResponsive}>
       <Slider {...settings}>
@@ -24,13 +29,13 @@ const HeroSliderResponsive = () => {
           <div className={general.slideResponsiveItem}>
 
             <div className={general.slideResponsiveTextContainer}>
-                <h2 className={general.slideItemDescription}>Creamos propuestas de valor que 
-                <span style={{color: `#336DAA`}}> revolucionan </span>
-                la forma en la que las empresas operan</h2>
+              <h2 className={general.slideItemDescription}>{translations.heroSlider.slideOne.textOne}
+              <span style={{color: `#336DAA`}}>{translations.heroSlider.slideOne.textBold}</span>
+              {translations.heroSlider.slideOne.textTwo}</h2>
 
-                <div className={general.generalBtnContainer}>
-                    <a href="" className={general.slideItemBtnBlue}>Conoce más</a>
-                </div>
+              <div className={general.generalBtnContainer}>
+                <a href="" className={general.slideItemBtnBlue}>{translations.heroSlider.slideOne.slideOneBtn}</a>
+              </div>
             </div>
 
             <Image src="/assets/img/background-1-mobile.JPG" 
@@ -45,13 +50,13 @@ const HeroSliderResponsive = () => {
         <div>
             <div className={general.slideResponsiveItem}>
                 <h2 className={general.slideItemDescription}>
-                construimos 
-                <span style={{color: `#4DA9B5`}}> soluciones a la medida, </span>soluciones a la medida, 
-                que se adaptan a tus necesidades
+                  {translations.heroSlider.slideTwo.textOne}
+                  <span style={{color: `#4DA9B5`}}> {translations.heroSlider.slideTwo.textBold} </span> 
+                  {translations.heroSlider.slideTwo.textTwo}
                 </h2>
 
                 <div className={general.generalBtnContainer}>
-                    <a href="" className={general.slideItemBtnBlueLight}>Conoce más</a>
+                  <a href="" className={general.slideItemBtnBlueLight}>{translations.heroSlider.slideTwo.slideTwoBtn}</a>
                 </div>
 
                 <Image src="/assets/img/slide_3_responsive.png" 

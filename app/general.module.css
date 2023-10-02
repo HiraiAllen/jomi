@@ -126,11 +126,48 @@
 /*About us section*/
 .about{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
 }
 
 .aboutImg{
-    max-width: 90%;
+    max-width: 30%;
+}
+
+.aboutContent{
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutContentTitle{
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    align-self: center;
+    border-bottom: 2px #4AA2AE solid;
+    font-size: 28px;
+}
+
+.aboutBox{
+    padding: 25px;
+    background: #fff;
+    box-shadow: 1px 1px 6px #8b8b8b;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.aboutBoxTitle{
+    color: #4AA2AE;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.aboutBoxDescription{
+    color: #444444;
+    line-height: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px #4AA2AE dashed;
 }
 
 /*Services*/
@@ -524,7 +561,23 @@
 
     /*About*/
     .about{
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aboutImg{
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .aboutContent{
+        align-items: center;
+        width: 95%;
+    }
+
+    .aboutBox{
+        max-width: 90%;
     }
 
     /*Services*/

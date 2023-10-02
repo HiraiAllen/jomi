@@ -1,7 +1,12 @@
 import general from '@/app/general.module.css';
 import Image from 'next/image';
 
-export default function Footer(){
+export default function Footer({ changeLanguage, translations }){
+    const handleLanguageChange = (newLanguage) => {
+        // Llama a la función para cambiar el idioma con el nuevo idioma como argumento
+        changeLanguage(newLanguage);
+    };
+
     return(
         <footer id="footer" className={general.footer}>
             <div className={general.footerContent}>
@@ -15,12 +20,12 @@ export default function Footer(){
                 </div>
 
                 <div className={general.copyrightFooter}>
-                    &copy; Copyright 2023 por <br></br>
-                    Todos los derechos reservados.
+                    &copy; {translations.footer.copyrightFor} <br></br>
+                    {translations.footer.copyrightText}
                 </div>
 
                 <div className={general.contactFooter}>
-                    <h3 className={general.contactFooterTitle}>CONTÁCTANOS</h3>
+                    <h3 className={general.contactFooterTitle}>{translations.footer.contactFooter.contactFooterTitle}</h3>
 
                     <div className={general.contactFooterItem}>
                         <span>(+57) 300 645 5511</span>

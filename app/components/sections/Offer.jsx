@@ -2,11 +2,16 @@
 import general from '@/app/general.module.css';
 import Image from 'next/image';
 
-export default function Offer(){
+export default function Offer({ changeLanguage, translations }){
+    const handleLanguageChange = (newLanguage) => {
+        // Llama a la función para cambiar el idioma con el nuevo idioma como argumento
+        changeLanguage(newLanguage);
+    };
+
     return(
         <div id="offer" className={general.offer}>
-            <h2 className={general.offerSubtitle}>¿CÓMO LO HACEMOS?</h2>
-            <h2 className={general.offerTitle}>Nuestra oferta de valor</h2>
+            <h2 className={general.offerSubtitle}>{translations.offer.offerSubtitle}</h2>
+            <h2 className={general.offerTitle}>{translations.offer.offerTitle}</h2>
 
             <div className={general.offerImgResponsiveContainer}>
                 <Image src="/assets/img/como-lo-hacemos-responsive.png" 
@@ -19,29 +24,34 @@ export default function Offer(){
 
             <div className={general.offerContainer}>
                 <div className={general.offerBox} style={{borderBottom: `2px #F7A728 solid`}}>
-                    <h2 className={general.offerBoxTitle}>Esquipo <br/> Multidisciplinar</h2>
+                    <h2 className={general.offerBoxTitle}>{translations.offer.offerItems.offerItemOneTitleA} 
+                    <br/>{translations.offer.offerItems.offerItemOneTitleB} </h2>
+
                     <span className={general.offerSeparator}></span>
                     <p className={general.OfferBoxDescription}>
-                        <b>Expertos en tecnología, diseño, marketing y negocio,</b> que nos permite crear soluciones 
-                        a otro nivel.
+                        <b>{translations.offer.offerItems.offerItemOneBoldText} </b> {translations.offer.offerItems.offerItemOneText} 
                     </p>
                 </div>
 
                 <div className={general.offerBox} style={{borderBottom: `2px #F7A728 solid`}}>
-                    <h2 className={general.offerBoxTitle}>Diseño centrado <br/> en el cliente</h2>
+                    <h2 className={general.offerBoxTitle}>{translations.offer.offerItems.offerItemTwoTitleA} 
+                    <br/>{translations.offer.offerItems.offerItemTwoTitleB}</h2>
+
                     <span className={general.offerSeparator}></span>
                     <p className={general.OfferBoxDescription}>
-                        Colaboración estrecha con nuestros clientes para <b>entender sus necesidades y ofrecer 
-                        soluciones adaptadas a sus objetivos.</b>
+                        {translations.offer.offerItems.offerItemTwoText} <b> {translations.offer.offerItems.offerItemTwoBoldText} </b>
                     </p>
                 </div>
 
                 <div className={general.offerBox}>
-                    <h2 className={general.offerBoxTitle}>Enfoque <br/> Metodológico</h2>
+                    <h2 className={general.offerBoxTitle}>{translations.offer.offerItems.offerItemThreeTitleA} 
+                    <br/> {translations.offer.offerItems.offerItemThreeTitleB} </h2>
+
                     <span className={general.offerSeparator}></span>
                     <p className={general.OfferBoxDescription}>
-                        Utilizamos metodologías como <b>design thinking, agile, lean startup,</b> entre otras; 
-                        que nos permite trabajar de manera eficiente y efectiva.
+                         {translations.offer.offerItems.offerItemThreeTextA} 
+                         <b>{translations.offer.offerItems.offerItemThreeBoldText} </b> 
+                         {translations.offer.offerItems.offerItemThreeTextB} 
                     </p>
                 </div>
             </div>

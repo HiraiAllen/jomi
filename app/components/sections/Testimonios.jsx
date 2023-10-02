@@ -26,11 +26,17 @@ const settings = {
   ],
 };
 
-export default function Testimonios(){
+export default function Testimonios({ changeLanguage, translations }){
+    const handleLanguageChange = (newLanguage) => {
+        // Llama a la función para cambiar el idioma con el nuevo idioma como argumento
+        changeLanguage(newLanguage);
+    };
+
+
     return(
         <div className={general.testimonios}>
-            <h2 className={general.testimoniosSubtitle}>CASOS DE ÉXITO</h2>
-            <h2 className={general.testimoniosTitle}>Nuestros clientes</h2>
+            <h2 className={general.testimoniosSubtitle}>{translations.testimonios.testimoniosSubtitle}</h2>
+            <h2 className={general.testimoniosTitle}>{translations.testimonios.testimoniosTitle}</h2>
 
             <Slider {...settings}>
                 <div>

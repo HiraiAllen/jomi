@@ -16,11 +16,16 @@ const settings = {
     slidesToScroll: 1,
 };
 
-export default function Services(){
+export default function Services({ changeLanguage, translations }){
+    const handleLanguageChange = (newLanguage) => {
+        // Llama a la función para cambiar el idioma con el nuevo idioma como argumento
+        changeLanguage(newLanguage);
+    };
+
     return(
         <div id="services" className={general.services}>
-            <h2 className={general.servicesSubtitle}>¿Qué hacemos?</h2>
-            <h2 className={general.servicesTitle}>Servicios</h2>
+            <h2 className={general.servicesSubtitle}>{translations.services.servicesSubtitle}</h2>
+            <h2 className={general.servicesTitle}>{translations.services.servicesTitle}</h2>
 
             <div className={general.servicesContainer}>
                 <div className={general.serviceBox}>
@@ -31,11 +36,10 @@ export default function Services(){
                     layout="responsive"
                     className={general.serviceImg}/>
 
-                    <h2 className={general.serviceTitle}>DESARROLLAMOS</h2>
+                    <h2 className={general.serviceTitle}>{translations.services.serviceOne.serviceTitle}</h2>
 
                     <p className={general.serviceDescription}>
-                        Construimos soluciones tech a la medida que se adaptan perfectamente a las necesidades
-                        de cada empresa.
+                        {translations.services.serviceOne.serviceDescription}
                     </p>
                 </div>
 
@@ -47,11 +51,10 @@ export default function Services(){
                     layout="responsive"
                     className={general.serviceImg}/>
 
-                    <h2 className={general.serviceTitle}>INNOVAMOS</h2>
+                    <h2 className={general.serviceTitle}>{translations.services.serviceTwo.serviceTitle}</h2>
 
                     <p className={general.serviceDescription}>
-                        Creamos propuestas de valor que revolucionan la forma en que las empresas operan y logran
-                        resultados.
+                        {translations.services.serviceTwo.serviceDescription}
                     </p>
                 </div>
 
@@ -63,11 +66,10 @@ export default function Services(){
                     layout="responsive"
                     className={general.serviceImg}/>
 
-                    <h2 className={general.serviceTitle}>ACELERAMOS</h2>
+                    <h2 className={general.serviceTitle}>{translations.services.serviceThree.serviceTitle}</h2>
 
                     <p className={general.serviceDescription}>
-                        Ayudamos a las empresas a lograr resultados significativos, optimizando sus procesos y
-                        mejorando su rendimiento.
+                        {translations.services.serviceThree.serviceDescription}
                     </p>
                 </div>
             </div>
@@ -116,7 +118,7 @@ export default function Services(){
             </div>
 
             <div className={general.servicesLinkBtnContainer}>
-                <a href="" className={general.servicesLinkBtn}>CONOCE MÁS</a>
+                <a href="" className={general.servicesLinkBtn}>{translations.services.servicesBtn}</a>
             </div>
         </div>
     );
