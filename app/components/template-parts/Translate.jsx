@@ -3,6 +3,7 @@ import Header from '../template-parts/Header';
 import HeroSlider from '../template-parts/HeroSlider';
 import HeroSliderResponsive from '../template-parts/HeroSliderResponsive';
 import Services from '../sections/Services';
+import ServicesSlider from '../sections/ServicesSlider';
 import AboutUs from '../sections/AboutUs';
 import Offer from '../sections/Offer';
 import Testimonios from '../sections/Testimonios';
@@ -280,6 +281,10 @@ const Translate = () => {
         translations={translations[currentLanguage]}/>
 
         <Services
+        changeLanguage={changeLanguage}
+        translations={translations[currentLanguage]}/>
+
+        <ServicesSlider
         changeLanguage={changeLanguage}
         translations={translations[currentLanguage]}/>
 

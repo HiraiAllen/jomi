@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
-    position: fixed;
+    position: fixed !important;
     z-index: 5000;
     box-shadow: 1px 1px 10px rgb(173, 173, 173);
 }
@@ -128,7 +128,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 60px;
+    margin: 80px 0px;
 }
 
 .aboutImg{
@@ -581,12 +581,17 @@
     }
 
     /*Services*/
-    .servicesContainer{
+    .services{
         display: none;
     }
 
     .servicesSliderResponsive{
-        display: inline-block;
+        display: block;
+        margin: 60px 0px;
+    }
+
+    .servicesSlideItem{
+        max-width: 95% !important;
     }
 
     /*Offer*/
@@ -619,6 +624,11 @@
 
     .offerSeparator{
         margin: 30px 0px;
+    }
+
+    /*TESTIMONIO*/
+    .testimonioDescriptionCard{
+        height: 180px;
     }
 
     /*CONTACTO*/
