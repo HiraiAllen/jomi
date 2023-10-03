@@ -515,6 +515,54 @@
     display: none;
 }
 
+.responsiveBtnContainer{
+    display: none;
+}
+
+.responsiveBtnAction{
+    border: none;
+    background: none;
+}
+
+.responsiveBtn{
+    max-width: 30px;
+    margin-right: 40px;
+}
+
+.responsiveMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: #fff; /* Fondo blanco o el color que desees */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+    transition: height 0.3s ease-in-out; /* Animación de altura */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 50px 10px;
+  }
+  
+  /* Estilo para los elementos del menú responsive */
+  .responsiveMenu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .responsiveMenu li {
+    padding: 10px 20px;
+  }
+  
+  /* Estilo para el botón de cerrar el menú */
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+  }
+
 @media screen and (max-width: 480px) {
     /*HEADER*/
     .menu, .contactAndLanguageButtons{
@@ -524,6 +572,12 @@
     .logoImg{
         max-width: 100px !important;
     }
+
+    .responsiveBtnContainer{
+        display: block;
+    }
+
+    /*Hero*/
 
     .slider{
         display: none;
@@ -591,7 +645,17 @@
     }
 
     .servicesSlideItem{
-        max-width: 95% !important;
+        max-width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .serviceBox{
+        max-width: 100%;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        height: 320px;
+        justify-content: center;
     }
 
     /*Offer*/
@@ -669,5 +733,47 @@
     .contactFooter{
         padding: 0px;
         margin-top: 30px;
+    }
+}
+
+/*Responsive desktop*/
+
+@media (min-width: 1680px) {
+    .aboutImg{
+        max-width: 500px;
+        margin-left: 100px;
+    }
+
+    .aboutContentTitle{
+        font-size: 48px;
+    }
+
+    .aboutContent{
+        margin-right: 180px;
+    }
+
+    .aboutBox{
+        width: 580px;
+    }
+
+    .aboutBoxTitle{
+        font-size: 32px;
+    }
+
+    .aboutBoxDescription{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .services{
+        background-size: cover;
+    }
+
+    .servicesContainer{
+        justify-content: space-around;
+    }
+
+    .offerContainer{
+        height: 900px;
     }
 }
